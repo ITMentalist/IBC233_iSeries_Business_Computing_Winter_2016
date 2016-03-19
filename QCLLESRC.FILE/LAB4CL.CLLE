@@ -1,0 +1,94 @@
+000100160203/* NAME: ANCHETA, JESUS JR */
+000101160203/* LAB4: INTERACTIVE PROGRAMMING */
+000102160203
+000103160203             PGM
+000104160209             DCLF LAB4DF
+000107160209             DCL  &CURSYM *CHAR 1
+000108160209             DCL  &IPLSTS *CHAR 1
+000113160209             DCL  &ACTJOB *DEC 5 0
+000116160209             DCL  &ACTJOBTXT *CHAR 5
+000117160209             DCL  &PWDLEN *DEC 3 0
+000118160209             DCL  &PWDLENTXT *CHAR 3
+000120160209             DCL  &PRVSIGN *CHAR 13
+000121160209             DCL  &SRLNBR  *CHAR 8
+000122160210             DCL  &MSGQ *CHAR 10
+000123160210             DCL  &MSGQLIB *CHAR 10
+000124160203
+000125160201             SNDRCVF
+000126160209             DOWHILE (&IN03='0')
+000127160201                SELECT
+000128160210                    WHEN (&IN21='1') DO
+000129160210                        CALL QUSCMDLN
+000130160210                        CHGVAR &IN21 '0'
+000132160210                   ENDDO
+000133160210
+000134160209                   WHEN (&OPTION='1' *OR &OPTION='01') CALLSUBR   OPTION1
+000135160209                   WHEN (&OPTION='2' *OR &OPTION='02') CALLSUBR   OPTION2
+000136160209
+000137160209                   WHEN (&OPTION='3' *OR &OPTION='03') DO
+000138160209                      CHGVAR &IN30 '0'
+000139160210                      RTVUSRPRF  MSGQ(&MSGQ) MSGQLIB(&MSGQLIB)
+000140160210                      CHGVAR &MSGTEXT ('Signed on User' *CAT '''s message queue is ' +
+000141160210                                 *CAT &MSGQLIB  *TCAT '/' +
+000142160210                                 *CAT &MSGQ)
+000143160209                   ENDDO
+000144160209
+000145160209                   WHEN (&OPTION='4' *OR &OPTION='04') DO
+000146160209                      CHGVAR &IN30 '0'
+000147160209                      RTVSYSVAL SYSVAL(QACTJOB) RTNVAR(&ACTJOB)
+000148160209                      CHGVAR &ACTJOBTXT &ACTJOB
+000149160209                      CHGVAR &MSGTEXT ('Initial number of active jobs for which storage is +
+000150160209                                   allocated is ' *CAT &ACTJOBTXT)
+000151160209                   ENDDO
+000152160209
+000153160209                   WHEN (&OPTION='5' *OR &OPTION='05') DO
+000154160209                      CHGVAR &IN30 '0'
+000155160209                      RTVSYSVAL SYSVAL(QSRLNBR) RTNVAR(&SRLNBR)
+000156160209                      CHGVAR &MSGTEXT ('Maximum password length is' *CAT &SRLNBR)
+000157160209                   ENDDO
+000161160209
+000162160209                   WHEN (&OPTION='6' *OR &OPTION='06') CALLSUBR   OPTION6
+000163160209
+000164160209                   WHEN (&OPTION='7' *OR &OPTION='07') DO
+000165160209                      CHGVAR &IN30 '0'
+000166160209                      RTVUSRPRF PRVSIGN(&PRVSIGN)
+000167160209                      CHGVAR &MSGTEXT ('Sign on user' *CAT '''s previous signon was on ' +
+000168160209                                   *CAT %SST(&PRVSIGN 2 2) *CAT '/' +
+000171160209                                   *CAT %SST(&PRVSIGN 4 2) *CAT '/' +
+000172160209                                   *CAT %SST(&PRVSIGN 6 2) *CAT '/ ' +
+000173160209                                   *CAT %SST(&PRVSIGN 8 2) *CAT ':' +
+000174160209                                   *CAT %SST(&PRVSIGN 10 2) *CAT ':' +
+000175160209                                   *CAT %SST(&PRVSIGN 12 2))
+000176160209                   ENDDO
+000183160209
+000184160201                   OTHERWISE  CHGVAR &IN30 '1'
+000185160201                ENDSELECT
+000187160201                SNDRCVF
+000189160201             ENDDO
+000190160201
+000191160201             SUBR       OPTION1
+000192160203                CHGVAR     &IN30 '0'
+000193160202                RTVSYSVAL  SYSVAL(QCURSYM) RTNVAR(&CURSYM)
+000194160209                CHGVAR     &MSGTEXT ('The currency symbol is set to ' *CAT &CURSYM)
+000195160201             ENDSUBR
+000196160203
+000197160203             SUBR       OPTION2
+000198160203                CHGVAR     &IN30 '0'
+000199160203                RTVSYSVAL  SYSVAL(QIPLSTS) RTNVAR(&IPLSTS)
+000200160203                CHGVAR     &MSGTEXT ('IPL Status indicator is ' *CAT &IPLSTS *CAT '=Operator +
+000201160203                             Panel IPL')
+000202160203             ENDSUBR
+000203160203
+000204160203             SUBR       OPTION6
+000205160203                CHGVAR     &IN30 '0'
+000206160209                RTVSYSVAL  SYSVAL(QPWDMAXLEN) RTNVAR(&PWDLEN)
+000207160209                CHGVAR     &PWDLENTXT &PWDLEN
+000208160209                CHGVAR     &MSGTEXT ('Maximum password length is ' *CAT &PWDLENTXT)
+000209160203             ENDSUBR
+000210160202             ENDPGM
+000211160203
+000212160202
+000213160201
+000214160201
+000215160201
+000216160201

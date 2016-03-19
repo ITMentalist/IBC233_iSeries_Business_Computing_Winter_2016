@@ -1,0 +1,36 @@
+000001160222     A          R GETINFO
+000002160222     A                                  1  4USER
+000003160222     A                                  1 71DATE
+000004160222     A                                      EDTCDE(Y)
+000005160222     A                                  2 31'Traffic Ticket Information'
+000006160222     A                                  4 26'Your Demerit Point Total:'
+000007160222     A                                  6  5'Number of Traffic Tickets in last -
+000008160222     A                                      three years:'
+000009160222     A                                  8 29'Yearly Insurance Cost:'
+000010160222     A            DEMERITS       2Y 0B  4 54
+000011160222     A  99                                  DSPATR(PR)
+000012160222     A                                      EDTCDE(2)
+000013160222     A            NMTICKETS      2Y 0B  6 54EDTCDE(2)
+000014160222     A  99                                  DSPATR(PR)
+000015160222     A            INSURANCE      6Y 2B  8 54EDTCDE(2)
+000016160222     A  99                                  DSPATR(PR)
+000017160222     A          R SHOWINFO                  OVERLAY
+000018160222     A                                      CA03(03)
+000019160222     A                                 10  4'With'
+000020160222     A                                 10 15'demerit points in Ontario they wil-
+000021160222     A                                      l:'
+000022160222     A            RESULT1       50A  O 11  4DSPATR(RI)
+000023160222     A                                 13  4'Action by Insurance company with'
+000024160222     A                                 13 42'tickets:'
+000025160222     A            RESULT2       50A  O 14  4DSPATR(RI)
+000026160222     A                                 16  4'Your new insurance rate based on n-
+000027160222     A                                      umber of tickets is: '
+000028160222     A            NEWRATE        9Y 2O 16 61EDTCDE(1)
+000029160222     A                                 19  4'F3 - Exit'
+000030160222     A            DEMERITS       2Y 0B 10 10
+000031160222     A  99                                  DSPATR(PR)
+000032160222     A            NMTICKETS      2Y 0B 13 37
+000033160222     A  99                                  DSPATR(PR)
+000034160222
+000035160222
+000100      

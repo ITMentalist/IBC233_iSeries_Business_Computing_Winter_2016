@@ -1,0 +1,51 @@
+000100160307     A                                      DSPSIZ(24 80 *DS3)
+000200160307     A          R RECORD1                   CF03(03 'EXIT')
+000300091027     A                                  4  2'Student Number:'
+000400091027     A                                  2 28'Student Information'
+000500091027     A                                  8  2'Birth Date:'
+000600160307     A                                  4 43'Phone:'
+000700091027     A                                 10  2'Address:'
+000800091027     A                                 20 32'F3 - Exit'
+000900091027     A                                  2 70DATE
+001000091027     A                                      EDTCDE(Y)
+001100091027     A                                  2  2USER
+001200091027     A                                  6  2'Name:'
+001201160307     A                                 14  2'Fines Owed:'
+001202160307     A                                 16  2'Fees Owed:'
+001221160307     A            FULLNAME      30   O  6 21
+001222160307     A            STUDENTNO R        O  4 21REFFLD(STUDENTSR/STUDENTNO +
+001223160307     A                                      DW233B03/STUDENTS)
+001224160307     A            BIRTHDATE R        O  8 21REFFLD(STUDENTSR/BIRTHDATE +
+001225160307     A                                      DW233B03/STUDENTS)
+001226160307     A            PHONE     R        O  4 51REFFLD(STUDENTSR/PHONE DW233B03/STU-
+001227160307     A                                      DENTS)
+001228160307     A            ADDRESS   R        O 10 21REFFLD(STUDENTSR/ADDRESS +
+001229160307     A                                      DW233B03/STUDENTS)
+001230160307     A            CITY      R        O 11 21REFFLD(STUDENTSR/CITY DW233B03/STUD-
+001231160307     A                                      ENTS)
+001232160307     A            PROVINCE  R        O 11 38REFFLD(STUDENTSR/PROVINCE +
+001233160307     A                                      DW233B03/STUDENTS)
+001234160307     A            POSTALCODER        O 12 21REFFLD(STUDENTSR/POSTALCODE +
+001235160309     A                                      DW233B03/STUDENTS)
+001236160307     A            FINESOWED R        O 14 21REFFLD(STUDENTSR/FINESOWED +
+001237160307     A                                      DW233B03/STUDENTS)
+001238160309     A                                      EDTCDE(1)
+001239160309     A  99                                  DSPATR(RI)
+001240160307     A            FEESOWED  R        O 16 21REFFLD(STUDENTSR/FEESOWED +
+001241160307     A                                      DW233B03/STUDENTS)
+001242160309     A                                      EDTCDE(1)
+001243160309     A  98                                  DSPATR(RI)
+001300091027     A          R RECORD2
+001400091027     A                                  5 16'Total Students: '
+001500091027     A                                  7 20'Fines Owed: '
+001600091027     A                                  8 21'Fees Owed: '
+001700091027     A            TOTALSTUD      5Y 0O  5 33EDTCDE(1)
+001800091027     A            TOTALFEES      7Y 2O  8 33EDTCDE(1)
+001900091027     A            TOTALFINES     7Y 2O  7 33EDTCDE(1)
+002000091027     A            TOTALOWING     7Y 2O 10 32EDTCDE(1 $)
+002100091027     A                                 10 19'Total Owing:'
+002200091027     A                                  2 27'Student Summary'
+002300091027     A                                  2 70DATE
+002400091027     A                                      EDTCDE(Y)
+002500091027     A                                  3 70TIME
+002600091027     A                                  2  2USER

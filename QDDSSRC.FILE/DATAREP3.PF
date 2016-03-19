@@ -1,0 +1,4 @@
+000100160224     A          R DATAEX
+000101160225     A            ZONED         15S 0       COLHDG('ZONED')
+000102160224     A            PACKED        15P 0       COLHDG('PACKED')
+000103160225     A            CHARACTER     15          COLHDG('CHARACTER')

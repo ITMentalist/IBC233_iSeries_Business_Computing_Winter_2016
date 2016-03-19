@@ -1,0 +1,16 @@
+000100090817     A                                      DSPSIZ(24 80 *DS3)
+000200160307     A          R RECORD1                   CA04(04)
+000300140707     A                                  2  3USER
+000400090817     A                                  2 30'Display System Level'
+000500140707     A                                  2 70SYSNAME
+000600090817     A                                  4 28'Version:'
+000700160307     A            SYSLVLV        2   O  4 38
+000800090817     A                                  6 28'Release:'
+000900090817     A            SYSLVLR        2   O  6 38
+001000090817     A                                  8 23'Modification:'
+001100090817     A            SYSLVLM        2   O  8 38
+001200090817     A                                 11 21'F4 - Command Provided By'
+001202160307     A          R RECORD2
+001203160307     A                                  2 32'COMMAND PROVIDED BY:'
+001204160307     A                                  3 33'ANCHETA, JESUS JR'
+001205160307

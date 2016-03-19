@@ -1,0 +1,64 @@
+000001160125     A          R RECORD1
+000002160125     A                                  1 71DATE
+000003160125     A                                      EDTCDE(Y)
+000004160125     A                                  2  3SYSNAME
+000005160125     A                                  2 71TIME
+000006160125     A                                  1  3USER
+000007160220     A                                  4 21'Test 1:'
+000008160125     A                                  1 33'Marks Calculator'
+000009160220     A                                  5 21'Test 2:'
+000010160220     A                                  6 21'Test 3:'
+000011160220     A                                  7 21'Labs:'
+000012160220     A                                  8 21'Exam:'
+000017160220     A            TEST1          3  0B  4 30RANGE(0 100)
+000018160220     A  99                                  DSPATR(PR)
+000019160220     A            TEST2          3  0B  5 30RANGE(0 100)
+000020160220     A  99                                  DSPATR(PR)
+000021160220     A            TEST3          3  0B  6 30RANGE(0 100)
+000022160220     A  99                                  DSPATR(PR)
+000023160220     A            LABS           3  0B  7 30RANGE(0 30)
+000024160220     A  99                                  DSPATR(PR)
+000025160220     A            EXAM           3  0B  8 30RANGE(0 100)
+000026160220     A  99                                  DSPATR(PR)
+000027160220     A  40                              4 38'This Test Mark Dropped'
+000028160220     A  50                              5 38'This Test Mark Dropped'
+000029160220     A  60                              6 38'This Test Mark Dropped'
+000030160220     A  70                              8 38'Automatic F with Exam Average belo-
+000031160220     A                                      w 50'
+000032160220     A                                      DSPATR(RI)
+000033160220     A                                      COLOR(RED)
+000034160125     A          R RECORD2                   CA03(03 'EXIT')
+000035160125     A                                      OVERLAY
+000036160220     A                                 12 21'Tests:'
+000037160125     A                                 14 21'Final Mark:'
+000038160125     A                                 16 21'Final Grade:'
+000039160125     A                                 20 11'F3 = Exit'
+000040160220     A            TESTOVRALL     3Y 0O 12 34EDTCDE(1)
+000041160220     A            NUMGRADE       3Y 0O 14 34EDTCDE(1)
+000042160221     A            LETGRADE       2   O 16 35
+000043160220     A  80                             12 41'Automatic F with Test Average belo-
+000044160220     A                                      w 50'
+000045160220     A                                      DSPATR(RI)
+000046160220     A                                      COLOR(RED)
+000047160220     A          R RECORD3
+000048160220     A                                  1  2'ANCHETA Jesus Jr'
+000049160220     A                                  1 33'Marks Statistics'
+000050160220     A                                  5 35'Pass:'
+000051160220     A                                  7 35'Fail:'
+000052160220     A                                  9 21'Total Mark Queries:'
+000053160220     A                                 11 26'Average Grade:'
+000054160220     A            PASS           3Y 0O  5 43EDTCDE(1)
+000055160220     A            TOTAL          3Y 0O  9 43EDTCDE(1)
+000056160220     A            FAIL           3Y 0O  7 43EDTCDE(1)
+000057160220     A            AVERAGE        3Y 0O 11 43EDTCDE(1)
+000058160220     A                                  1 68DATE
+000059160220     A                                      EDTCDE(Y)
+000060160220     A                                  2 68TIME
+000062160220
+000063160125
+000100      
+000101160220     A*%%RS+<record-sequences>
+000102160220     A*%%RS+ <sequence name="Untitled">
+000103160220     A*%%RS+  <device type="display" width="80" height="24" />
+000104160220     A*%%RS+ </sequence>
+000105160220     A*%%RS </record-sequences>
