@@ -1,0 +1,27 @@
+000001160329     A          R RECORD1
+000002160329     A                                  1  3USER
+000003160329     A                                  2  3'ANCHETA, Jesus Jr.'
+000004160329     A                                  1 31'Payroll Program Completed'
+000005160329     A                                  1 71DATE
+000006160329     A                                      EDTCDE(Y)
+000007160329     A                                  4 11'Rates:'
+000008160329     A                                  5 21'Day Rate:'
+000009160329     A                                  6 21'Afternoon Rate:'
+000010160329     A                                  7 21'Night Rate:'
+000011160329     A                                  9 11'Totals:'
+000012160329     A                                 10 21'Regular Pay:'
+000013160329     A                                 11 21'Overtime Pay:'
+000014160329     A                                 12 21'Company Payout:'
+000015160330     A            DAYRATE   R        O  5 41REFFLD(SHIFTRATES/DAYRATE +
+000016160329     A                                      SENECAPAY/SHIFTRATES)
+000017160329     A                                      EDTCDE(1)
+000018160330     A            AFTNRATE  R        O  6 41REFFLD(SHIFTRATES/AFTNRATE +
+000019160329     A                                      SENECAPAY/SHIFTRATES)
+000020160329     A                                      EDTCDE(1)
+000021160330     A            NIGHTRATE R        O  7 41REFFLD(SHIFTRATES/NIGHTRATE +
+000022160329     A                                      SENECAPAY/SHIFTRATES)
+000023160329     A                                      EDTCDE(1)
+000024160329     A            TOTREGPAY      9  2  10 42EDTCDE(1)
+000025160329     A            TOTOVTPAY      9  2  11 42EDTCDE(1)
+000026160329     A            TOTEMPPAY      9  2  12 41EDTCDE(1 $)
+000100      

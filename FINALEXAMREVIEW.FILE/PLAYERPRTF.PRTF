@@ -1,0 +1,35 @@
+000001160417     A          R TITLE
+000002160417     A            PPOSITION      9      2 46
+000003160417     A          R COLHDG                    SPACEB(1)
+000004160417     A                                     5'Number'
+000005160417     A                                      SPACEB(1)
+000006160417     A                                    15'Position'
+000007160417     A                                    29'Full Name'
+000009160417     A                                    59'Weight'
+000010160417     A                                    75'Height'
+000011160417     A          R PLAYERDETL                SPACEB(1)
+000012160417     A            NUMBER    R              5
+000013160417     A                                      REFFLD(AMERICANLG/NUMBER +
+000014160417     A                                      DW233B03/AMERICANLG)
+000015160417     A            POSITION  R             16REFFLD(AMERICANLG/POSITION +
+000016160417     A                                      DW233B03/AMERICANLG)
+000017160417     A            FULLNAME      21        29
+000018160417     A            WEIGHT    R             60REFFLD(AMERICANLG/WEIGHT +
+000019160417     A                                      DW233B03/AMERICANLG)
+000020160417     A            HEIGHT    R             74REFFLD(AMERICANLG/HEIGHT +
+000021160417     A                                      DW233B03/AMERICANLG)
+000024160417     A          R TOTAL                     SPACEB(1)
+000025160417     A                                    21'TOTAL'
+000026160417     A                                      SPACEB(1)
+000027160417     A            TOTALPLAY      3  0     31EDTCDE(1)
+000029160417     A            AVGPLAY        3  0     59EDTCDE(1)
+000100      
+000101160417     A*%%RS+<record-sequences>
+000102160417     A*%%RS+ <sequence name="Untitled">
+000103160417     A*%%RS+  <device type="printer" width="132" height="66" />
+000104160417     A*%%RS+  <record-write record-format="TITLE" />
+000105160417     A*%%RS+  <record-write record-format="COLHDG" />
+000106160417     A*%%RS+  <record-write record-format="PLAYERDETL" />
+000107160417     A*%%RS+  <record-write record-format="TOTAL" />
+000108160417     A*%%RS+ </sequence>
+000109160417     A*%%RS </record-sequences>

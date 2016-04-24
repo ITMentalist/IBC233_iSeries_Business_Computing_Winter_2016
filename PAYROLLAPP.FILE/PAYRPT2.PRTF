@@ -6,7 +6,8 @@
 000006160316     A                                  1 89'Page:'
 000007160316     A                                  2  3'Name: ANCHETA, Jesus Jr.'
 000008160316     A                                  1 49'Weekly Payroll Report'
-000009160330     A          R COLHDG                    SPACEB(2)
+000009160404     A          R COLHDG                    SPACEB(1)
+000010160404     A            SHIFTTYPE     30   O    36SPACEA(1)
 000024160316     A                                     3'Employee'
 000025160323     A                                    17'Work'
 000026160323     A                                    26'Pay'

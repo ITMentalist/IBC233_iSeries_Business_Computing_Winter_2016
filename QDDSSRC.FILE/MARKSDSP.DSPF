@@ -1,0 +1,33 @@
+000001160125     A          R RECORD1
+000002160125     A                                  1 71DATE
+000003160125     A                                      EDTCDE(Y)
+000004160125     A                                  2  3SYSNAME
+000005160125     A                                  2 71TIME
+000006160125     A                                  1  3USER
+000007160125     A                                  4 31'Test 1:'
+000008160125     A                                  1 33'Marks Calculator'
+000009160125     A                                  5 31'Test 2:'
+000010160125     A                                  6 31'Test 3:'
+000011160125     A                                  7 31'Labs:'
+000012160125     A                                  8 31'Exam:'
+000017160127     A            TEST1          3N 0B  4 41RANGE(0 100)
+000019160126     A            TEST2          3  0B  5 41RANGE(0 100)
+000020160126     A            TEST3          3  0B  6 41RANGE(0 100)
+000021160127     A            LABS           3  0B  7 41RANGE(0 30)
+000022160126     A            EXAM           3  0B  8 41RANGE(0 100)
+000023160125     A          R RECORD2                   CA03(03 'EXIT')
+000024160125     A                                      OVERLAY
+000025160125     A                                 12 21'Tests:'
+000026160125     A                                 14 21'Final Mark:'
+000027160125     A                                 16 21'Final Grade:'
+000028160125     A                                 20 11'F3 = Exit'
+000029160127     A            TESTOVRALL     3N 0O 12 41
+000031160125     A            NUMGRADE       3Y 0O 14 41EDTCDE(1)
+000032160126     A            LETGRADE       2   O 16 42
+000033160125
+000100
+000101160125     A*%%RS+<record-sequences>
+000102160125     A*%%RS+ <sequence name="Untitled">
+000103160125     A*%%RS+  <device type="display" width="80" height="24" />
+000104160125     A*%%RS+ </sequence>
+000105160125     A*%%RS </record-sequences>

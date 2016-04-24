@@ -1,0 +1,47 @@
+000002160415     A                                      CF08(08 'SUMMARY')
+000003160415     A                                      CF03(03 'EXIT')
+000004160415     A          R RECORD1
+000005160415     A                                  2 11'Name:'
+000006160415     A                                  3 11'Number:'
+000007160415     A                                  4 11'Birtdate:'
+000008160415     A                                  5 11'Position:'
+000009160415     A                                  7 11'Hits / Throws:'
+000010160415     A                                  9 11'Height:'
+000011160415     A                                  9 31'Weight:'
+000012160415     A                                 11 31'F3 - Exit'
+000013160415     A                                 12 31'F8 - Summary'
+000014160415     A            NUMBER    R        B  3 22REFFLD(AMERICANLG/NUMBER +
+000015160415     A                                      DW233B03/AMERICANLG)
+000016160415     A            BIRTHDATE R        B  4 22REFFLD(AMERICANLG/BIRTHDATE +
+000017160415     A                                      DW233B03/AMERICANLG)
+000020160415     A            HEIGHT    R        B  9 21REFFLD(AMERICANLG/HEIGHT +
+000021160415     A                                      DW233B03/AMERICANLG)
+000022160415     A            WEIGHT    R        B  9 41REFFLD(AMERICANLG/WEIGHT +
+000023160415     A                                      DW233B03/AMERICANLG)
+000024160415     A            HITSTHROWSR        B  7 31REFFLD(AMERICANLG/HITSTHROWS +
+000025160415     A                                      DW233B03/AMERICANLG)
+000026160415     A            FULLNAME      21   O  2 22
+000027160415     A            PPOSITION      9   O  5 22
+000028160415     A          R RECORD2
+000029160415     A                                  2 33'Total'
+000030160415     A                                  2 51'Average Weight'
+000031160415     A                                  3 11'Pitchers'
+000032160415     A                                  4 11'Outfields'
+000033160415     A                                  5 11'Infields'
+000034160415     A                                  6 11'Catchers'
+000035160415     A                                  7 11'Others'
+000036160415     A                                  8 11'Total Players'
+000037160415     A            TOTALPITCH     3  0   3 32EDTCDE(1)
+000039160415     A            TOTALOUT       3  0   4 32EDTCDE(1)
+000040160415     A            TOTALIN        3  0   5 32EDTCDE(1)
+000041160415     A            TOTALCATCH     3  0   6 32EDTCDE(1)
+000042160415     A            TOTALOTHER     3  0   7 32EDTCDE(1)
+000043160415     A            TOTALPLAY      3  0   8 32EDTCDE(1)
+000044160415     A            AVGPITCH       3  0   3 51EDTCDE(1)
+000045160415     A            AVGOUT         3  0   4 51EDTCDE(1)
+000046160415     A            AVGIN          3  0   5 51EDTCDE(1)
+000047160415     A            AVGCATCH       3  0   6 51EDTCDE(1)
+000048160415     A            AVGOTHER       3  0   7 51EDTCDE(1)
+000049160415     A            AVGPLAY        3  0   8 51EDTCDE(1)
+000050160415
+000100      

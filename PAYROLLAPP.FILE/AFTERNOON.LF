@@ -1,0 +1,3 @@
+000100160404     A          R ALLSHIFT                  PFILE(SENECAPAY/ALLSHIFT)
+000101160404     A          K EMPNUM
+000102160404     A          S WORKSHIFT                 COMP(EQ 'A')
